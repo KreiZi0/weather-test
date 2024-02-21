@@ -107,4 +107,17 @@ describe('WeatherCard component tests', () => {
     render(<WeatherCard city={city}></WeatherCard>);
     await waitFor(() => expect(screen.getByText(19.53)).toBeInTheDocument()) ;
   });
+
+  it('renders placeholder when temperature is not available', () => {
+    const city = {
+      name:'Melbourne',
+      country: 'Australia',
+      state: 'Victoria',
+      lat: 0,
+      lon: 0,
+    }
+    render(<WeatherCard city={city}></WeatherCard>);
+    expect(screen.getByText('-/-')).toBeInTheDocument();
+  });
+
 });

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 
 const WeatherCard =  ({city}) => {
-    const [weather, setWeather] = useState({})
+    const [weather, setWeather] = useState()
 
     useEffect(() => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city.name}`)
@@ -16,7 +16,7 @@ const WeatherCard =  ({city}) => {
     return (
         <div>
             <h3>{city.name}</h3>
-            <p>{weather && weather.temperature} </p>
+            <p>{weather ? weather.temperature : '-/-'} </p>
         </div>
     );
     
