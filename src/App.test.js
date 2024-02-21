@@ -120,4 +120,17 @@ describe('WeatherCard component tests', () => {
     expect(screen.getByText('-/-')).toBeInTheDocument();
   });
 
+  it('renders weather information', async () => {
+    const city = {
+      name: 'Melbourne',
+      country: 'Australia',
+      state: 'Victoria',
+      lat: 0,
+      lon: 0,
+    }
+
+    render(<WeatherCard city={city}></WeatherCard>);
+    await waitFor(() => expect(screen.getByText('Clear')).toBeInTheDocument())
+  })
+
 });
