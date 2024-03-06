@@ -1,8 +1,8 @@
 import { render, screen, waitFor, act, within } from '@testing-library/react';
-import App from './App';
-import { createMockServer } from './createMockServer';
+import App from '../App';
+import { createMockServer } from '../mock/createMockServer';
 import userEvent from '@testing-library/user-event';
-import WeatherCard from './components/WeatherCard';
+import WeatherCard from '../components/WeatherCard';
 
 let server;
 

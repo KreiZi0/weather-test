@@ -1,6 +1,6 @@
 import { createServer } from "miragejs";
-import searchResult from './search-result.json'
-import weather from './weather.json'
+import searchResult from '../../src/mock/search-result.json'
+import weather from '../../src/mock/weather.json'
 
 export const createMockServer = () => {
     return createServer({
