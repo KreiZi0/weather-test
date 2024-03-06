@@ -1,5 +1,5 @@
 import { render, screen, waitFor, act, within } from '@testing-library/react';
-import App from '../App';
+import App from '../../src/App';
 import { createMockServer } from '../mock/createMockServer';
 import userEvent from '@testing-library/user-event';
 import WeatherCard from '../components/WeatherCard';
